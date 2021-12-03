@@ -44,7 +44,7 @@ private String fare;
 
 private String fclass;
 
-private String name;
+public String Name;
 
 public String status;
 
@@ -55,7 +55,7 @@ public String add(@PathVariable String name) {
 		this.fare=fs1.fare();
 		this.fclass=fs1.getclass();
 		status="booked";
-		this.name=name;
+		this.Name=name;
 		BookingDetails b1=new BookingDetails(fid,fare,fclass,status,name);
 			rp.save(b1);
 			return "booked."+"name:"+name+"\nclass:"+b1.getFclass()+"\npayment:"+b1.getPayment();
